@@ -9,7 +9,7 @@ fi
 showMessage "Installing PHP..."
 runSudo "apt-get install -y php"
 # PHPVERSION=$(ls -Art1 /etc/php | tail -n 1) # СтрокаСергея
-PHPVERSION="php7.4" # Явно указываем версию php
+PHPVERSION="7.4" # Явно указываем версию php
 
 showMessage "Version: $PHPVERSION"
 runSudo "apt-get install -y libapache2-mod-php$PHPVERSION"
