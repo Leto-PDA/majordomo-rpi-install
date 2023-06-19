@@ -10,7 +10,7 @@ cd $destPath || exit
 sudo apt-get install -y git
 if [ $devRun != "y" ]; then
  rm -Rf ./majordomo-rpi-install
- git clone https://github.com/sergejey/majordomo-rpi-install.git
+ git clone https://github.com/Leto-PDA/majordomo-rpi-install.git
 fi
 
 if [ "$0" == *"curl"* ]; then
