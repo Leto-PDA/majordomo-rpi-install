@@ -8,7 +8,8 @@ fi
 
 showMessage "Installing PHP..."
 runSudo "apt-get install -y php"
-PHPVERSION=$(ls -Art1 /etc/php | tail -n 1)
+# PHPVERSION=$(ls -Art1 /etc/php | tail -n 1) # СтрокаСергея
+PHPVERSION="php7.4" # Явно указываем версию php
 
 showMessage "Version: $PHPVERSION"
 runSudo "apt-get install -y libapache2-mod-php$PHPVERSION"
@@ -24,6 +25,8 @@ runSudo "apt-get install -y php$PHPVERSION-gd"
 runSudo "apt-get install -y php$PHPVERSION-mbstring"
 runSudo "apt-get install -y php$PHPVERSION-xml"
 runSudo "apt-get install -y php$PHPVERSION-bcmath"
+runSudo "apt-get install -y php$PHPVERSION-pear"
+runSudo "apt-get install -y php$PHPVERSION-dev"
 #sudo apt-get install -y php$PHPVERSION-mcrypt"
 runSudo "apt-get install -y php$PHPVERSION-zip"
 runSudo "apt-get install -y php$PHPVERSION-redis"
