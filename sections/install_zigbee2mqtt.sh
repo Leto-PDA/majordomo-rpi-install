@@ -11,7 +11,7 @@ runSudo "mkdir /opt/zigbee2mqtt"
 
 runSudo "rm -Rf /opt/zigbee2mqtt"
 runSudo "git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt"
-runSudo "chown -R oldi:0-0-0 /opt/zigbee2mqtt"
+runSudo "chown -R oldi:oldi /opt/zigbee2mqtt"
 
 sudo echo "frontend:">>/opt/zigbee2mqtt/data/configuration.yaml
 sudo echo "  port: 8080">>/opt/zigbee2mqtt/data/configuration.yaml
